@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"
+           xmlns="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"
+           elementFormDefault="qualified"> <!--elementFormDefault="qualified"-->
+    <xs:element name="corporatePricingLabelCount">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="locationNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="divisionPricingLabelCounts" type="DivisionPricingLabelCountsType" minOccurs="0" maxOccurs="1">
+                    <xs:unique name="entry">
+                        <xs:selector xpath="entry"/>
+                        <xs:field xpath="key"/>
+                    </xs:unique>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="DivisionPricingLabelCountsType">
+        <xs:sequence>
+            <xs:element name="entry" type="DivisionPricingLabelCountMapItemType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DivisionPricingLabelCountMapItemType">
+        <xs:sequence>
+            <xs:element name="key" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="value" type="DivisonPricingLabelCountType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DivisonPricingLabelCountType">
+        <xs:sequence>
+            <xs:element name="locationNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="regionPricingLabelCounts" type="RegionPricingLabelCountsType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RegionPricingLabelCountsType">
+        <xs:sequence>
+            <xs:element name="entry" type="RegionPricingLabelCountMapItemType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RegionPricingLabelCountMapItemType">
+        <xs:sequence>
+            <xs:element name="key" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="value" type="RegionPricingLabelCountType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RegionPricingLabelCountType">
+        <xs:sequence>
+            <xs:element name="locationNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="districtPricingLabelCounts" type="DistrictPricingLabelCountsType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="DistrictPricingLabelCountsType">
+        <xs:sequence>
+            <xs:element name="entry" type="DistrictPricingLabelCountMapItemType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DistrictPricingLabelCountMapItemType">
+        <xs:sequence>
+            <xs:element name="key" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="value" type="DistrictPricingLabelCountType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DistrictPricingLabelCountType">
+        <xs:sequence>
+            <xs:element name="locationNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="storePricingLabelCounts" type="StorePricingLabelCountsType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="StorePricingLabelCountsType">
+        <xs:sequence>
+            <xs:element name="entry" type="StorePricingLabelCountMapItemType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="StorePricingLabelCountMapItemType">
+        <xs:sequence>
+            <xs:element name="key" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="value" type="StorePricingLabelCountType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="StorePricingLabelCountType">
+        <xs:sequence>
+            <xs:element name="locationNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="labelCount" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
