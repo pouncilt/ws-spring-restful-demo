@@ -34,7 +34,7 @@ public class JAXBStorePricingLabelCountMapAdapter extends XmlAdapter<JAXBStorePr
     @Override
     public Map<String, JAXBStorePricingLabelCount> unmarshal(StorePricingLabelCountAdaptedMap adaptedMap) throws Exception {
         Map<String, JAXBStorePricingLabelCount> map = new HashMap<String, JAXBStorePricingLabelCount>();
-        for(StorePricingLabelCountItem item : adaptedMap.entry) {
+        for (StorePricingLabelCountItem item : adaptedMap.entry) {
             map.put(item.key, item.value);
         }
         return map;
@@ -43,7 +43,7 @@ public class JAXBStorePricingLabelCountMapAdapter extends XmlAdapter<JAXBStorePr
     @Override
     public StorePricingLabelCountAdaptedMap marshal(Map<String, JAXBStorePricingLabelCount> map) throws Exception {
         StorePricingLabelCountAdaptedMap adaptedMap = new StorePricingLabelCountAdaptedMap();
-        for(Map.Entry<String, JAXBStorePricingLabelCount> mapEntry : map.entrySet()) {
+        for (Map.Entry<String, JAXBStorePricingLabelCount> mapEntry : map.entrySet()) {
             StorePricingLabelCountItem item = new StorePricingLabelCountItem();
             item.key = mapEntry.getKey();
             item.value = mapEntry.getValue();

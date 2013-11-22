@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
  * To change this template use File | Settings | File Templates.
  */
 public class PricingLabelCountRestfulClient {
-    @Autowired(required=true)
+    @Autowired(required = true)
     private RestTemplate restTemplate;
 
     public JAXBCorporatePricingLabelCount retrievePricingLabelCountsXMLRequest() {

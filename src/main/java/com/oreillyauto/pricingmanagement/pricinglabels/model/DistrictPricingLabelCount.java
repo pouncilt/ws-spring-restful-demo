@@ -47,7 +47,7 @@ public class DistrictPricingLabelCount extends BasePricingLabelCount implements 
     @Override
     public Integer getCount() {
         Integer count = 0;
-        for(LabelCountTree labelCountTree: storePricingLabelCounts.values()) {
+        for (LabelCountTree labelCountTree : storePricingLabelCounts.values()) {
             count += labelCountTree.getCount();
         }
         return count;

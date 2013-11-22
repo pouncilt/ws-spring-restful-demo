@@ -34,7 +34,7 @@ public class JAXBDistrictPricingLabelCountMapAdapter extends XmlAdapter<JAXBDist
     @Override
     public Map<String, JAXBDistrictPricingLabelCount> unmarshal(DistrictPricingLabelCountAdaptedMap adaptedMap) throws Exception {
         Map<String, JAXBDistrictPricingLabelCount> map = new HashMap<String, JAXBDistrictPricingLabelCount>();
-        for(DistrictPricingLabelCountItem entry : adaptedMap.entry) {
+        for (DistrictPricingLabelCountItem entry : adaptedMap.entry) {
             map.put(entry.key, entry.value);
         }
         return map;
@@ -43,7 +43,7 @@ public class JAXBDistrictPricingLabelCountMapAdapter extends XmlAdapter<JAXBDist
     @Override
     public DistrictPricingLabelCountAdaptedMap marshal(Map<String, JAXBDistrictPricingLabelCount> map) throws Exception {
         DistrictPricingLabelCountAdaptedMap adaptedMap = new DistrictPricingLabelCountAdaptedMap();
-        for(Map.Entry<String, JAXBDistrictPricingLabelCount> mapEntry : map.entrySet()) {
+        for (Map.Entry<String, JAXBDistrictPricingLabelCount> mapEntry : map.entrySet()) {
             DistrictPricingLabelCountItem entry = new DistrictPricingLabelCountItem();
             entry.key = mapEntry.getKey();
             entry.value = mapEntry.getValue();

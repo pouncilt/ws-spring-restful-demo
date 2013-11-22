@@ -2,7 +2,6 @@ package com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters;
 
 import com.oreillyauto.pricingmanagement.pricinglabels.model.DistrictPricingLabelCount;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,15 +18,15 @@ import java.util.Map;
 public class DistrictPricingLabelCountMapAdapter extends XmlAdapter<DistrictPricingLabelCountMapAdapter.DistrictPricingLabelCountAdaptedMap, Map<String, DistrictPricingLabelCount>> {
 
     public static class DistrictPricingLabelCountAdaptedMap {
-        @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
+        //@XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
         public List<DistrictPricingLabelCountItem> entry = new ArrayList<DistrictPricingLabelCountItem>();
 
     }
 
     public static class DistrictPricingLabelCountItem {
-        @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
+        //@XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
         public String key;
-        @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
+        //@XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
         public DistrictPricingLabelCount value;
 
     }
@@ -35,7 +34,7 @@ public class DistrictPricingLabelCountMapAdapter extends XmlAdapter<DistrictPric
     @Override
     public Map<String, DistrictPricingLabelCount> unmarshal(DistrictPricingLabelCountAdaptedMap adaptedMap) throws Exception {
         Map<String, DistrictPricingLabelCount> map = new HashMap<String, DistrictPricingLabelCount>();
-        for(DistrictPricingLabelCountItem entry : adaptedMap.entry) {
+        for (DistrictPricingLabelCountItem entry : adaptedMap.entry) {
             map.put(entry.key, entry.value);
         }
         return map;
@@ -44,7 +43,7 @@ public class DistrictPricingLabelCountMapAdapter extends XmlAdapter<DistrictPric
     @Override
     public DistrictPricingLabelCountAdaptedMap marshal(Map<String, DistrictPricingLabelCount> map) throws Exception {
         DistrictPricingLabelCountAdaptedMap adaptedMap = new DistrictPricingLabelCountAdaptedMap();
-        for(Map.Entry<String, DistrictPricingLabelCount> mapEntry : map.entrySet()) {
+        for (Map.Entry<String, DistrictPricingLabelCount> mapEntry : map.entrySet()) {
             DistrictPricingLabelCountItem entry = new DistrictPricingLabelCountItem();
             entry.key = mapEntry.getKey();
             entry.value = mapEntry.getValue();

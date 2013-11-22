@@ -12,7 +12,7 @@ import java.util.List;
  * Time: 9:21 PM
  * To change this template use File | Settings | File Templates.
  */
-public class StorePricingLabelCount extends BasePricingLabelCount implements LabelCountTree{
+public class StorePricingLabelCount extends BasePricingLabelCount implements LabelCountTree {
     private Integer labelCount = 0;
 
     public StorePricingLabelCount() {

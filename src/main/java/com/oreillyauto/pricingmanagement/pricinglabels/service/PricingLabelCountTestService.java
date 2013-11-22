@@ -1,7 +1,7 @@
 package com.oreillyauto.pricingmanagement.pricinglabels.service;
 
-import com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters.JAXBPricingLabelCountTestFactory;
 import com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.JAXBCorporatePricingLabelCount;
+import com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters.JAXBPricingLabelCountTestFactory;
 
 /**
  * Created with IntelliJ IDEA.

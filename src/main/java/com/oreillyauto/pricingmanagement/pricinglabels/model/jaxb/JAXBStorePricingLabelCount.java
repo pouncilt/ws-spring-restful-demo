@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.oreillyauto.pricingmanagement.commons.LabelCountTree;
 
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +15,8 @@ import java.util.List;
  * Time: 2:15 PM
  * To change this template use File | Settings | File Templates.
  */
-@JsonIgnoreProperties({"count","children", "locationType"})
-@XmlType(propOrder={"locationNumber","labelCount"})
+@JsonIgnoreProperties({"count", "children", "locationType"})
+@XmlType(propOrder = {"locationNumber", "labelCount"})
 public class JAXBStorePricingLabelCount implements LabelCountTree {
     private Integer locationNumber = 0;
     private Integer labelCount = 0;

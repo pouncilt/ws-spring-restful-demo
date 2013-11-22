@@ -19,8 +19,8 @@ import java.util.Map;
  * Time: 2:13 PM
  * To change this template use File | Settings | File Templates.
  */
-@JsonIgnoreProperties({"count","children", "locationType"})
-@XmlType(propOrder={"locationNumber","storePricingLabelCountMap"})
+@JsonIgnoreProperties({"count", "children", "locationType"})
+@XmlType(propOrder = {"locationNumber", "storePricingLabelCountMap"})
 public class JAXBDistrictPricingLabelCount implements LabelCountTree {
     private Integer locationNumber = 0;
     private Map<String, JAXBStorePricingLabelCount> storePricingLabelCountMap = new Hashtable<String, JAXBStorePricingLabelCount>();
@@ -36,7 +36,7 @@ public class JAXBDistrictPricingLabelCount implements LabelCountTree {
     }
 
     @XmlJavaTypeAdapter(JAXBStorePricingLabelCountMapAdapter.class)
-    @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model", name="storePricingLabelCounts")
+    @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model", name = "storePricingLabelCounts")
     public Map<String, JAXBStorePricingLabelCount> getStorePricingLabelCountMap() {
         return storePricingLabelCountMap;
     }
@@ -48,7 +48,7 @@ public class JAXBDistrictPricingLabelCount implements LabelCountTree {
     @Override
     public Integer getCount() {
         Integer count = 0;
-        for(LabelCountTree labelCountTree: storePricingLabelCountMap.values()) {
+        for (LabelCountTree labelCountTree : storePricingLabelCountMap.values()) {
             count += labelCountTree.getCount();
         }
         return count;

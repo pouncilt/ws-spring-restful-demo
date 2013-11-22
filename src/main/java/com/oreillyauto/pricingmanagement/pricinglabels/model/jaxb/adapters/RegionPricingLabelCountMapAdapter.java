@@ -2,7 +2,6 @@ package com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters;
 
 import com.oreillyauto.pricingmanagement.pricinglabels.model.RegionPricingLabelCount;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,17 +19,17 @@ public class RegionPricingLabelCountMapAdapter extends XmlAdapter<RegionPricingL
 
     public static class RegionPricingLabelCountAdaptedMap {
 
-        @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
+        //@XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
         public List<RegionPricingLabelCountItem> entry = new ArrayList<RegionPricingLabelCountItem>();
 
     }
 
     public static class RegionPricingLabelCountItem {
 
-        @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
+        //@XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
         public String key;
 
-        @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
+        //@XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model")
         public RegionPricingLabelCount value;
 
     }
@@ -38,7 +37,7 @@ public class RegionPricingLabelCountMapAdapter extends XmlAdapter<RegionPricingL
     @Override
     public Map<String, RegionPricingLabelCount> unmarshal(RegionPricingLabelCountAdaptedMap adaptedMap) throws Exception {
         Map<String, RegionPricingLabelCount> map = new HashMap<String, RegionPricingLabelCount>();
-        for(RegionPricingLabelCountItem entry : adaptedMap.entry) {
+        for (RegionPricingLabelCountItem entry : adaptedMap.entry) {
             map.put(entry.key, entry.value);
         }
         return map;
@@ -47,7 +46,7 @@ public class RegionPricingLabelCountMapAdapter extends XmlAdapter<RegionPricingL
     @Override
     public RegionPricingLabelCountAdaptedMap marshal(Map<String, RegionPricingLabelCount> map) throws Exception {
         RegionPricingLabelCountAdaptedMap adaptedMap = new RegionPricingLabelCountAdaptedMap();
-        for(Map.Entry<String, RegionPricingLabelCount> mapEntry : map.entrySet()) {
+        for (Map.Entry<String, RegionPricingLabelCount> mapEntry : map.entrySet()) {
             RegionPricingLabelCountItem entry = new RegionPricingLabelCountItem();
             entry.key = mapEntry.getKey();
             entry.value = mapEntry.getValue();

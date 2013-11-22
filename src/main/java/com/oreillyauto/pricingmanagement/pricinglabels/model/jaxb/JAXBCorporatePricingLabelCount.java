@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.oreillyauto.pricingmanagement.commons.LabelCountTree;
 import com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters.JAXBDivisionPricingLabelCountMapAdapter;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -18,15 +20,16 @@ import java.util.Map;
  * Time: 2:12 PM
  * To change this template use File | Settings | File Templates.
  */
-@JsonIgnoreProperties({"count","children", "locationType"})
+@JsonIgnoreProperties({"count", "children", "locationType"})
 @XmlRootElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model", name = "corporatePricingLabelCount")
-@XmlType (propOrder={"locationNumber","divisionPricingLabelCountMap"})
+@XmlType(propOrder = {"locationNumber", "divisionPricingLabelCountMap"})
 public class JAXBCorporatePricingLabelCount implements LabelCountTree {
     private Integer locationNumber = 0;
     private Map<String, JAXBDivisionPricingLabelCount> divisionPricingLabelCountMap = new Hashtable<String, JAXBDivisionPricingLabelCount>();
 
 
-    public JAXBCorporatePricingLabelCount() {}
+    public JAXBCorporatePricingLabelCount() {
+    }
 
     public JAXBCorporatePricingLabelCount(Integer locationNumber, Map<String, JAXBDivisionPricingLabelCount> divisionPricingLabelCountMap) {
         this.locationNumber = locationNumber;
@@ -44,7 +47,7 @@ public class JAXBCorporatePricingLabelCount implements LabelCountTree {
     }
 
     @XmlJavaTypeAdapter(JAXBDivisionPricingLabelCountMapAdapter.class)
-    @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model", name="divisionPricingLabelCounts")
+    @XmlElement(namespace = "http://www.oreillyauto.com/pricingmanagement/pricinglabels/model", name = "divisionPricingLabelCounts")
     public Map<String, JAXBDivisionPricingLabelCount> getDivisionPricingLabelCountMap() {
         return divisionPricingLabelCountMap;
     }
@@ -56,7 +59,7 @@ public class JAXBCorporatePricingLabelCount implements LabelCountTree {
     @Override
     public Integer getCount() {
         Integer count = 0;
-        for(LabelCountTree labelCountTree: divisionPricingLabelCountMap.values()) {
+        for (LabelCountTree labelCountTree : divisionPricingLabelCountMap.values()) {
             count += labelCountTree.getCount();
         }
         return count;

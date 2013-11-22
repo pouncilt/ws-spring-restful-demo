@@ -40,7 +40,6 @@ dependencies {
     compile 'jboss.jaxbintros:jboss-jaxb-intros:1.0.2.GA'
     compile 'log4j:log4j:1.2.17'
     compile 'org.apache.httpcomponents:httpclient:4.3.1'
-    compile 'org.eclipse.persistence:org.eclipse.persistence.moxy:2.5.1'
     compile 'org.springframework:spring-core:3.2.5.RELEASE'
     compile 'org.springframework:spring-context:3.2.5.RELEASE'
     compile 'org.springframework:spring-context-support:3.2.5.RELEASE'

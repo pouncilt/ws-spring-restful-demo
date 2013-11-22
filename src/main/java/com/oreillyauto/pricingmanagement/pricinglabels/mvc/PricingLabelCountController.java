@@ -23,18 +23,19 @@ public class PricingLabelCountController {
     private PricingLabelCountService pricingLabelCountService;
 
     @Inject
-    public PricingLabelCountController(PricingLabelCountService pricingLabelCountService){
+    public PricingLabelCountController(PricingLabelCountService pricingLabelCountService) {
         this.pricingLabelCountService = pricingLabelCountService;
     }
 
-    @RequestMapping(value="/pricingLabelCount", method= RequestMethod.GET, headers={"Accept=text/xml, application/json"})
-    public @ResponseBody
-    JAXBCorporatePricingLabelCount getPricingLabelCounts(){
+    @RequestMapping(value = "/pricingLabelCount", method = RequestMethod.GET, headers = {"Accept=text/xml, application/json"})
+    public
+    @ResponseBody
+    JAXBCorporatePricingLabelCount getPricingLabelCounts() {
         return pricingLabelCountService.getTodaysPricingLabelCounts();
     }
 
-    @RequestMapping(value="/corporate", method= RequestMethod.GET)
-    public ModelAndView getCorporatePricingLabelCount(){
+    @RequestMapping(value = "/corporate", method = RequestMethod.GET)
+    public ModelAndView getCorporatePricingLabelCount() {
         JAXBCorporatePricingLabelCount pricingLabelCount = pricingLabelCountService.getTodaysPricingLabelCounts();
         return new ModelAndView("pricingLabelCount", "object", pricingLabelCount);
     }

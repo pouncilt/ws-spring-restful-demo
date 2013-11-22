@@ -14,8 +14,9 @@ import java.util.Map;
  * Time: 9:13 PM
  * To change this template use File | Settings | File Templates.
  */
-public class RegionPricingLabelCount extends BasePricingLabelCount implements LabelCountTree{
+public class RegionPricingLabelCount extends BasePricingLabelCount implements LabelCountTree {
     private Map<String, DistrictPricingLabelCount> districtPricingLabelCounts = new Hashtable<String, DistrictPricingLabelCount>();
+
     public RegionPricingLabelCount() {
         super();
     }
@@ -36,7 +37,7 @@ public class RegionPricingLabelCount extends BasePricingLabelCount implements La
     @Override
     public Integer getCount() {
         Integer count = 0;
-        for(LabelCountTree labelCountTree: districtPricingLabelCounts.values()) {
+        for (LabelCountTree labelCountTree : districtPricingLabelCounts.values()) {
             count += labelCountTree.getCount();
         }
         return count;

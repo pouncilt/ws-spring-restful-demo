@@ -33,6 +33,7 @@ public class JAXBPricingLabelCountTestFactory {
 
         return instance;
     }
+
     public JAXBCorporatePricingLabelCount createJAXBCorporatePricingLabelCount() {
         JAXBDistrictPricingLabelCount districtPricingLabelCount1 = new JAXBDistrictPricingLabelCount(444, createJAXBStorePricingLabelCountMap1());
         JAXBDistrictPricingLabelCount districtPricingLabelCount2 = new JAXBDistrictPricingLabelCount(4444, createJAXBStorePricingLabelCountMap2());
@@ -64,22 +65,22 @@ public class JAXBPricingLabelCountTestFactory {
 
     private Map<String, JAXBDistrictPricingLabelCount> createJAXBDistrictPricingLabelCountMap(JAXBDistrictPricingLabelCount districtPricingLabelCount) {
         Map<String, JAXBDistrictPricingLabelCount> districtPricingLabelCountMap = new HashMap<String, JAXBDistrictPricingLabelCount>();
-        districtPricingLabelCountMap.put("district-location-number-"+districtPricingLabelCount.getLocationNumber().toString(), districtPricingLabelCount);
+        districtPricingLabelCountMap.put("district-location-number-" + districtPricingLabelCount.getLocationNumber().toString(), districtPricingLabelCount);
         return districtPricingLabelCountMap;
     }
 
     private Map<String, JAXBDivisionPricingLabelCount> createJAXBDivisionPricingLabelCountMap(JAXBDivisionPricingLabelCount divisionPricingLabelCount) {
-        Map<String,JAXBDivisionPricingLabelCount> divisionPricingLabelCountMap = new HashMap<String,JAXBDivisionPricingLabelCount>();
-        divisionPricingLabelCountMap.put("division-location-number-"+divisionPricingLabelCount.getLocationNumber(), divisionPricingLabelCount);
-        divisionPricingLabelCountMap.put("division-location-number-"+divisionPricingLabelCount.getLocationNumber(), divisionPricingLabelCount);
+        Map<String, JAXBDivisionPricingLabelCount> divisionPricingLabelCountMap = new HashMap<String, JAXBDivisionPricingLabelCount>();
+        divisionPricingLabelCountMap.put("division-location-number-" + divisionPricingLabelCount.getLocationNumber(), divisionPricingLabelCount);
+        divisionPricingLabelCountMap.put("division-location-number-" + divisionPricingLabelCount.getLocationNumber(), divisionPricingLabelCount);
         return divisionPricingLabelCountMap;
     }
 
     private Map<String, JAXBDivisionPricingLabelCount> createJAXBDivisionPricingLabelCountMap(List<JAXBDivisionPricingLabelCount> divisionPricingLabelCountList) {
-        Map<String,JAXBDivisionPricingLabelCount> divisionPricingLabelCountMap = new HashMap<String,JAXBDivisionPricingLabelCount>();
+        Map<String, JAXBDivisionPricingLabelCount> divisionPricingLabelCountMap = new HashMap<String, JAXBDivisionPricingLabelCount>();
 
-        for (JAXBDivisionPricingLabelCount divisionPricingLabelCount: divisionPricingLabelCountList) {
-            divisionPricingLabelCountMap.put("division-location-number-"+divisionPricingLabelCount.getLocationNumber(), divisionPricingLabelCount);
+        for (JAXBDivisionPricingLabelCount divisionPricingLabelCount : divisionPricingLabelCountList) {
+            divisionPricingLabelCountMap.put("division-location-number-" + divisionPricingLabelCount.getLocationNumber(), divisionPricingLabelCount);
         }
 
         return divisionPricingLabelCountMap;
@@ -87,43 +88,43 @@ public class JAXBPricingLabelCountTestFactory {
 
     private Map<String, JAXBRegionPricingLabelCount> createJAXBRegionPricingLabelCountMap(JAXBRegionPricingLabelCount regionPricingLabelCount) {
         Map<String, JAXBRegionPricingLabelCount> regionPricingLabelCountMap = new HashMap<String, JAXBRegionPricingLabelCount>();
-        regionPricingLabelCountMap.put("region-location-number-"+regionPricingLabelCount.getLocationNumber(), regionPricingLabelCount);
+        regionPricingLabelCountMap.put("region-location-number-" + regionPricingLabelCount.getLocationNumber(), regionPricingLabelCount);
         return regionPricingLabelCountMap;
     }
 
     private Map<String, JAXBRegionPricingLabelCount> createJAXBRegionPricingLabelCountMap(List<JAXBRegionPricingLabelCount> regionPricingLabelCountlist) {
         Map<String, JAXBRegionPricingLabelCount> regionPricingLabelCountMap = new HashMap<String, JAXBRegionPricingLabelCount>();
 
-        for(JAXBRegionPricingLabelCount regionPricingLabelCount: regionPricingLabelCountlist){
-            regionPricingLabelCountMap.put("region-location-number-"+regionPricingLabelCount.getLocationNumber(), regionPricingLabelCount);
+        for (JAXBRegionPricingLabelCount regionPricingLabelCount : regionPricingLabelCountlist) {
+            regionPricingLabelCountMap.put("region-location-number-" + regionPricingLabelCount.getLocationNumber(), regionPricingLabelCount);
         }
         return regionPricingLabelCountMap;
     }
 
     private Map<String, JAXBStorePricingLabelCount> createJAXBStorePricingLabelCountMap1() {
         JAXBStorePricingLabelCount storeLabelCount1 = createJAXBStoreLabel(999, 5);
-        JAXBStorePricingLabelCount storeLabelCount2  = createJAXBStoreLabel(991, 15);
+        JAXBStorePricingLabelCount storeLabelCount2 = createJAXBStoreLabel(991, 15);
         Map<String, JAXBStorePricingLabelCount> storeLabelCountMap = new HashMap<String, JAXBStorePricingLabelCount>();
-        storeLabelCountMap.put("store-location-number-"+storeLabelCount1.getLocationNumber().toString(), storeLabelCount1);
-        storeLabelCountMap.put("store-location-number-"+storeLabelCount2.getLocationNumber().toString(), storeLabelCount2);
+        storeLabelCountMap.put("store-location-number-" + storeLabelCount1.getLocationNumber().toString(), storeLabelCount1);
+        storeLabelCountMap.put("store-location-number-" + storeLabelCount2.getLocationNumber().toString(), storeLabelCount2);
         return storeLabelCountMap;
     }
 
     private Map<String, JAXBStorePricingLabelCount> createJAXBStorePricingLabelCountMap2() {
         JAXBStorePricingLabelCount storeLabelCount1 = createJAXBStoreLabel(9999, 5);
-        JAXBStorePricingLabelCount storeLabelCount2  = createJAXBStoreLabel(9991, 15);
+        JAXBStorePricingLabelCount storeLabelCount2 = createJAXBStoreLabel(9991, 15);
         Map<String, JAXBStorePricingLabelCount> storeLabelCountMap = new HashMap<String, JAXBStorePricingLabelCount>();
-        storeLabelCountMap.put("store-location-number-"+storeLabelCount1.getLocationNumber().toString(), storeLabelCount1);
-        storeLabelCountMap.put("store-location-number-"+storeLabelCount2.getLocationNumber().toString(), storeLabelCount2);
+        storeLabelCountMap.put("store-location-number-" + storeLabelCount1.getLocationNumber().toString(), storeLabelCount1);
+        storeLabelCountMap.put("store-location-number-" + storeLabelCount2.getLocationNumber().toString(), storeLabelCount2);
         return storeLabelCountMap;
     }
 
     private Map<String, JAXBStorePricingLabelCount> createJAXBStorePricingLabelCountMap3() {
         JAXBStorePricingLabelCount storeLabelCount1 = createJAXBStoreLabel(99999, 5);
-        JAXBStorePricingLabelCount storeLabelCount2  = createJAXBStoreLabel(99991, 15);
+        JAXBStorePricingLabelCount storeLabelCount2 = createJAXBStoreLabel(99991, 15);
         Map<String, JAXBStorePricingLabelCount> storeLabelCountMap = new HashMap<String, JAXBStorePricingLabelCount>();
-        storeLabelCountMap.put("store-location-number-"+storeLabelCount1.getLocationNumber().toString(), storeLabelCount1);
-        storeLabelCountMap.put("store-location-number-"+storeLabelCount2.getLocationNumber().toString(), storeLabelCount2);
+        storeLabelCountMap.put("store-location-number-" + storeLabelCount1.getLocationNumber().toString(), storeLabelCount1);
+        storeLabelCountMap.put("store-location-number-" + storeLabelCount2.getLocationNumber().toString(), storeLabelCount2);
         return storeLabelCountMap;
     }
 
@@ -141,10 +142,10 @@ public class JAXBPricingLabelCountTestFactory {
 
     private Map<String, StorePricingLabelCount> createStorePricingLabelCount() {
         StorePricingLabelCount storeLabelCount1 = createStoreLabel(000, 5);
-        StorePricingLabelCount storeLabelCount2  = createStoreLabel(001, 15);
+        StorePricingLabelCount storeLabelCount2 = createStoreLabel(001, 15);
         Map<String, StorePricingLabelCount> storeLabelCountMap = new HashMap<String, StorePricingLabelCount>();
-        storeLabelCountMap.put("store-location-number-"+storeLabelCount1.getLocationNumber().toString(), storeLabelCount1);
-        storeLabelCountMap.put("store-location-number-"+storeLabelCount2.getLocationNumber().toString(), storeLabelCount2);
+        storeLabelCountMap.put("store-location-number-" + storeLabelCount1.getLocationNumber().toString(), storeLabelCount1);
+        storeLabelCountMap.put("store-location-number-" + storeLabelCount2.getLocationNumber().toString(), storeLabelCount2);
         return storeLabelCountMap;
     }
 
@@ -153,20 +154,20 @@ public class JAXBPricingLabelCountTestFactory {
     }
 
     private Map<String, DivisionPricingLabelCount> createDivisionPricingLabelCount(DivisionPricingLabelCount divisionPricingLabelCount) {
-        Map<String,DivisionPricingLabelCount> divisionPricingLabelCountMap = new HashMap<String,DivisionPricingLabelCount>();
-        divisionPricingLabelCountMap.put("division-location-number-"+divisionPricingLabelCount.getLocationNumber(), divisionPricingLabelCount);
+        Map<String, DivisionPricingLabelCount> divisionPricingLabelCountMap = new HashMap<String, DivisionPricingLabelCount>();
+        divisionPricingLabelCountMap.put("division-location-number-" + divisionPricingLabelCount.getLocationNumber(), divisionPricingLabelCount);
         return divisionPricingLabelCountMap;
     }
 
     private Map<String, RegionPricingLabelCount> createRegionPricingLabelCount(RegionPricingLabelCount regionPricingLabelCount) {
         Map<String, RegionPricingLabelCount> regionPricingLabelCountMap = new HashMap<String, RegionPricingLabelCount>();
-        regionPricingLabelCountMap.put("region-location-number-"+regionPricingLabelCount.getLocationNumber(), regionPricingLabelCount);
+        regionPricingLabelCountMap.put("region-location-number-" + regionPricingLabelCount.getLocationNumber(), regionPricingLabelCount);
         return regionPricingLabelCountMap;
     }
 
     private Map<String, DistrictPricingLabelCount> createDistrictPricingLabelCount(DistrictPricingLabelCount districtPricingLabelCount) {
         Map<String, DistrictPricingLabelCount> districtPricingLabelCountMap = new HashMap<String, DistrictPricingLabelCount>();
-        districtPricingLabelCountMap.put("district-location-number-"+districtPricingLabelCount.getLocationNumber().toString(), districtPricingLabelCount);
+        districtPricingLabelCountMap.put("district-location-number-" + districtPricingLabelCount.getLocationNumber().toString(), districtPricingLabelCount);
         return districtPricingLabelCountMap;
     }
 }

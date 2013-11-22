@@ -10,8 +10,11 @@ package com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters;
 
 import com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.JAXBDivisionPricingLabelCount;
 
-import java.util.*;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class JAXBDivisionPricingLabelCountMapAdapter extends XmlAdapter<JAXBDivisionPricingLabelCountMapAdapter.DivisionPricingLabelCountAdaptedMap, Map<String, JAXBDivisionPricingLabelCount>> {
 
@@ -32,7 +35,7 @@ public class JAXBDivisionPricingLabelCountMapAdapter extends XmlAdapter<JAXBDivi
     @Override
     public Map<String, JAXBDivisionPricingLabelCount> unmarshal(DivisionPricingLabelCountAdaptedMap adaptedMap) throws Exception {
         Map<String, JAXBDivisionPricingLabelCount> map = new HashMap<String, JAXBDivisionPricingLabelCount>();
-        for(DivisionPricingLabelCountItem item : adaptedMap.entry) {
+        for (DivisionPricingLabelCountItem item : adaptedMap.entry) {
             map.put(item.key, item.value);
         }
         return map;
@@ -41,7 +44,7 @@ public class JAXBDivisionPricingLabelCountMapAdapter extends XmlAdapter<JAXBDivi
     @Override
     public DivisionPricingLabelCountAdaptedMap marshal(Map<String, JAXBDivisionPricingLabelCount> map) throws Exception {
         DivisionPricingLabelCountAdaptedMap adaptedMap = new DivisionPricingLabelCountAdaptedMap();
-        for(Map.Entry<String, JAXBDivisionPricingLabelCount> mapEntry : map.entrySet()) {
+        for (Map.Entry<String, JAXBDivisionPricingLabelCount> mapEntry : map.entrySet()) {
             DivisionPricingLabelCountItem item = new DivisionPricingLabelCountItem();
             item.key = mapEntry.getKey();
             item.value = mapEntry.getValue();

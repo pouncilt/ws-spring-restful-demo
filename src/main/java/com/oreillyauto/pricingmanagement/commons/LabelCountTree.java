@@ -11,7 +11,10 @@ import java.util.List;
  */
 public interface LabelCountTree {
     public Integer getCount();
+
     public String getLocationType();
+
     public Integer getLocationNumber();
+
     public List<LabelCountTree> getChildren();
 }
