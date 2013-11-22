@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd
    ">
-    <context:component-scan base-package="com.oreillyauto.pricingmanagement.pricinglabels"/>
+    <context:component-scan base-package="com.pouncilt.pricing"/>
     <context:annotation-config/>
 
 

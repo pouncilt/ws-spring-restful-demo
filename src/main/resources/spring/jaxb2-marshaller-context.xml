@@ -12,7 +12,7 @@
     <bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
         <property name="classesToBeBound">
             <list>
-                <value>com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.JAXBCorporatePricingLabelCount</value>
+                <value>com.pouncilt.pricing.model.jaxb.JAXBCorporatePricingLabelCount</value>
             </list>
         </property>
         <property name="schema" value="classpath:schemas/pricing-label-counts.xsd"/>
@@ -21,7 +21,7 @@
     <bean id="jaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
         <property name="classesToBeBound">
             <list>
-                <value>com.oreillyauto.pricingmanagement.pricinglabels.model.CorporatePricingLabelCount</value>
+                <value>com.pouncilt.pricing.model.CorporatePricingLabelCount</value>
             </list>
         </property>
         <property name="jaxbContextProperties">

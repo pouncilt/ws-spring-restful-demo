@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"
-           xmlns="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"
+           targetNamespace="http://www.pouncilt.com/pricing/pricinglabels/model"
+           xmlns="http://www.pouncilt.com/pricing/pricinglabels/model"
            elementFormDefault="qualified"> <!--elementFormDefault="qualified"-->
     <xs:element name="corporatePricingLabelCount">
         <xs:complexType>

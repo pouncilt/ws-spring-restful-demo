@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<corporatePricingLabelCount xmlns="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model">
+<corporatePricingLabelCount xmlns="http://www.pouncilt.com/pricing/pricinglabels/model">
     <locationNumber>111</locationNumber>
     <divisionPricingLabelCounts>
         <entry>
