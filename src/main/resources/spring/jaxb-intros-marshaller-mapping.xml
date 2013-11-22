@@ -5,28 +5,8 @@
              xsi:schemaLocation="http://www.jboss.org/xsd/jaxb/intros http://anonsvn.jboss.org/repos/jbossws/projects/jaxbintros/trunk/src/main/resources/jaxb-intros.xsd">
 
 
-    <!--Class name="com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters.DivisionPricingLabelCountAdaptedMap">
-        <XmlAccessorType value="FIELD"/>
-        <Field name="entry">
-            <XmlElement name="entry" namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/>
-        </Field>
-    </Class>
-
-    <Class name="com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters.DivisionPricingLabelCountItem">
-        <XmlAccessorType value="FIELD"/>
-        <Field name="key">
-            <XmlElement name="key" namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/>
-        </Field>
-        <Field name="value">
-            <XmlElement name="value" namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/>
-        </Field>
-    </Class-->
-
-
-
     <Class name="com.oreillyauto.pricingmanagement.pricinglabels.model.BasePricingLabelCount">
         <XmlAccessorType value="FIELD"/>
-        <!--XmlType propOrder="{'locationNumber'}"/-->
         <XmlTransient/>
         <Field name="locationNumber">
             <XmlElement name="locationNumber" required="true" namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/>
@@ -38,7 +18,6 @@
         <XmlRootElement name="corporatePricingLabelCount" namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/>
         <Field name="divisionPricingLabelCounts">
             <XmlElement name="divisionPricingLabelCounts"  namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/>
-            <!--XmlElementWrapper namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/-->
             <XmlJavaTypeAdapter value="com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters.DivisionPricingLabelCountMapAdapter"/>
         </Field>
     </Class>
@@ -47,7 +26,6 @@
         <XmlType propOrder="{'locationNumber', 'regionPricingLabelCounts'}"/>
         <Field name="regionPricingLabelCounts">
             <XmlElement name="regionPricingLabelCounts" namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/>
-            <!--XmlElementWrapper namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/-->
             <XmlJavaTypeAdapter value="com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters.RegionPricingLabelCountMapAdapter"/>
         </Field>
     </Class>
@@ -56,7 +34,6 @@
         <XmlType propOrder="{'locationNumber', 'districtPricingLabelCounts'}"/>
         <Field name="districtPricingLabelCounts">
             <XmlElement name="districtPricingLabelCounts" namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/>
-            <!--XmlElementWrapper namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/-->
             <XmlJavaTypeAdapter value="com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters.DistrictPricingLabelCountMapAdapter"/>
         </Field>
     </Class>
@@ -65,7 +42,6 @@
         <XmlType propOrder="{'locationNumber', 'storePricingLabelCounts'}"/>
         <Field name="storePricingLabelCounts">
             <XmlElement name="storePricingLabelCounts" namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/>
-            <!--XmlElementWrapper namespace="http://www.oreillyauto.com/pricingmanagement/pricinglabels/model"/-->
             <XmlJavaTypeAdapter value="com.oreillyauto.pricingmanagement.pricinglabels.model.jaxb.adapters.StorePricingLabelCountMapAdapter"/>
         </Field>
     </Class>
